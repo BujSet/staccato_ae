@@ -1,8 +1,8 @@
 
-TARGET=check_rdseed
+all: check_rdseed.o
 
-all: $(TARGET)
+%.o: %.c 
+	@g++ -g -std=c++11 $< -lm -o $@ -Wall -O3 
 
-$(TARGET): $(TARGET).c 
-	g++ -std=c++11 $(TARGET).c -lm -o $(TARGET) -Wall -O3 
-
+clean: 
+	@rm -f *.o massif.out.*
