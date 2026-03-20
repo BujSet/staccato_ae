@@ -8,7 +8,7 @@ run: mt.o
 	./mt.o $(ITERS) $(RATE) | dieharder -d $(TEST_NUM) -n $(NTUP) -g 200
 
 example: example.o 
-	./example.o $(SEED) | dieharder -a -g 200 | tee data/$(TRIAL)_$(SEED).txt
+	./example.o $(SEED) | dieharder -a -g 200 | tee $(TRIAL)_$(SEED).txt
 
 clean: 
 	@rm -f *.o massif.out.*

@@ -39,5 +39,24 @@ Diharder can be installed with `apt` on Ubuntu:
 sudo apt install dieharder
 ```
 
+## Getting Started
 
+First ensure that all needed software dependencies are installed:
+
+```
+sudo apt update
+sudo apt install build-essential dieharder
+```
+
+## Run Dieharder on Target RNG
+
+Navigate into a RNG directory. For example, to evaluate the Mersenne Twister 
+RNG scheme, perform the following:
+
+```
+cd mersenne_twister/
+make clean 
+make
+make 
+```
 
